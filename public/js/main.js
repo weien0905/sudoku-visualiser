@@ -350,6 +350,7 @@ const solve_sudoku = () => {
     clear_btn.disabled = true;
     msg.textContent = 'Solving';
     msg.parentElement.style.background = 'plum';
+    speed = 500 - slider.value;
     execute = true;
 
     sudoku_input.forEach(cell => {
