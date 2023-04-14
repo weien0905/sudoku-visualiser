@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sudoku-border {
+    @apply w-9 h-9 relative border-2 border-black text-center;
+}
+
+.sudoku-input {
+    @apply text-center font-black text-xl;
+    width: 1.95rem;
+    height: 1.95rem;
+}
+
+.sudoku-result {
+    @apply text-center font-normal text-xl hidden;
+}
+
+.left-sudoku-border {
+    @apply border-l-4;
+}
+
+.top-sudoku-border {
+    @apply border-t-4;
+}
+
+.right-sudoku-border {
+    @apply border-r-4;
+}
+
+.bottom-sudoku-border {
+    @apply border-b-4;
+}

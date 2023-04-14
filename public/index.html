@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Visualiser</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-gray-200">
+    <nav class="bg-black flex justify-around">
+        <div class="text-white py-3 font-black text-3xl">Sudoku Visualiser</div>
+    </nav>
+    <main class="container mx-auto px-4">
+      <section class="text-center">
+        <div class="text-black font-extrabold text-xl p-4">Watch how computer solves Sudoku puzzle</div>
+      </section>
+      <section class="flex flex-col space-y-4 space-x-0 md:justify-center md:flex-row md:space-y-0 md:space-x-5">
+        <div class="flex justify-center">
+          <table class="border-collpase bg-white">
+            <tbody>
+              <tr>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border top-sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+              <tr>
+                <td class="sudoku-border bottom-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border left-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+                <td class="sudoku-border bottom-sudoku-border right-sudoku-border">
+                  <div class="sudoku-result"></div>
+                  <input class="sudoku-input"></input>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="border-2 border-black p-2 flex flex-col space-y-2 md:w-[50%] bg-white">
+          <div class="border-2 border-black">
+            <div class="p-2 bg-yellow-100">
+              <span id="msg">Fill in the Sudoku puzzle and click "Start". You may also use arrow keys to move around cells.</span>
+            </div>
+          </div>
+          <div class="flex space-x-2">
+            <button class="flex-1 p-4 bg-black text-white disabled:cursor-not-allowed hover:bg-zinc-800" id="start-btn">Start</button>
+            <button class="flex-1 p-4 bg-black text-white disabled:cursor-not-allowed hover:bg-zinc-800" id="clear-btn">Clear</button>
+          </div>
+          <div>
+            <div class="font-semibold">Speed</div>
+            <div>
+              <input class="w-full accent-black" type="range" min="0" max="500" value="400" id="slider">
+            </div>
+          </div>
+          <div>
+            <p class="text-justify">This puzzzle is solved using backtracking search and AC-3 algorithm. <a class="text-blue-700 hover:underline" href="https://github.com/weien0905/sudoku-solver/blob/main/javascript/sudoku.js">Learn more</a> on how the algorithm is implemented.</p>
+          </div>
+        </div>    
+      </section>
+    </main>
+    <footer class="p-4 pt-12 text-center">
+      <div>Copyright &copy; 2023 - <a class="text-blue-700 hover:underline" href="https://weien0905.github.io/">weien0905</a></div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCAWSPrYyZ6b0WMN-sBLkABimovxv50lmQ",
+        authDomain: "sudokuvisualiser.firebaseapp.com",
+        projectId: "sudokuvisualiser",
+        storageBucket: "sudokuvisualiser.appspot.com",
+        messagingSenderId: "143795778603",
+        appId: "1:143795778603:web:1392b2cafc3db79192a66e",
+        measurementId: "G-NJ5DS3WRLP"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
